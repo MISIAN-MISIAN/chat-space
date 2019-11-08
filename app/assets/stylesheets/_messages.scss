@@ -17,11 +17,11 @@
       }
       &__lists {
         display: inline-block;
-        float: right;
         .list{
           display: inline-block;
         }
         .icon {
+          float: right;
           font-size: 16px;
           color: white;
         }
@@ -51,7 +51,7 @@
 
   .chat {
     width: calc(100% - 300px);
-    height: calc(100vh - 190px);
+    /*height: 100%;*/
     .header {
       box-sizing: border-box;
       height: 100px;
@@ -89,9 +89,11 @@
         }
       }
     }
+
     .messages{
+      overflow: scroll;
       background-color: #fafafa;
-      height: 100%;
+      height: calc(100vh - 190px);
       .message{
         padding: 46px 40px;
         .message-top{
@@ -122,12 +124,13 @@
       height: 90px;
       padding: 20px 50px 20px 40px;
       .form-box{
-        display: flex;
+        width: calc(100% - 110px);
         .new-message {
           border: none;
           float: left;
+
           height: 50px;
-          width: calc(100% - 90px);
+          width: 100%;
           color: #434a54;
           font-size: 16px;
         }
@@ -140,17 +143,21 @@
             position: relative;
             padding-left: 10px;
             left: 850px;
+            bottom: 50px;
            
           }  
         }
         
         .btn{
+          position: relative;
           width: 100px;
           height: 50px;
           padding: 0 30px;
+          margin-bottom: 50px;
           background-color: #38aef0;
           color: white;
-          float: right;
+          left: 910px;
+          bottom: 50px;
           margin-left: 30px;
           
         }

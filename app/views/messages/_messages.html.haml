@@ -1,12 +1,11 @@
-.messages
-  .message
-    .message-top
-      .message-top__name
-        = messages.user.name
-      .message-top__data
-        = messages.created_at.strftime("%Y/%m/%d %H:%M")
-    .message-bottom
-      - if messages.content.present?
-        %p.message-top__comment
-          = messages.content
-      = image_tag messages.image. url, class:"lower-message__image" if messages.image.present?
+.message
+  .message-top
+    .message-top__name
+      = messages.user.name
+    .message-top__data
+      = messages.created_at.strftime("%Y/%m/%d %H:%M")
+  .message-bottom
+    - if messages.content.present?
+      %p.message-top__comment
+        = messages.content
+    = image_tag messages.image. url, class:"lower-message__image" if messages.image.present?

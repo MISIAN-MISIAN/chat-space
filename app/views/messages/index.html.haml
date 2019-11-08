@@ -20,11 +20,11 @@
     .messages
       = render partial: 'messages', collection: @messages
 
-    .footer
-      .form
-        .form-box
-          = form_for [@group, @message] do |f|
-            = f.text_field :content, class: "new-message", placeholder: "type a message"
-            .new-message-box
-              %i.fa.fa-image{class: "box-image"}
-            = f.submit "Send", class: "btn"
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'image', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

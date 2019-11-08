@@ -2,7 +2,29 @@
   .side
     = render partial: "groups/side"
   .chat  
-    = render partial: "chat"
-    .footer
-      = render partial: "footer"
+    .header
+      .left-header
+        .left-header__title
+          = @group.name
+        %ul.left-header__members
+          Member :
+          %li
+            - @group.users.each do |user|
+              = user.name
+        
       
+      .right-header
+        .right-header__btn
+          = link_to "Edit", edit_group_path(current_user)
+
+    .messages
+      = render partial: 'messages', collection: @messages
+
+    .footer
+      .form
+        .form-box
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: "new-message", placeholder: "type a message"
+            .new-message-box
+              %i.fa.fa-image{class: "box-image"}
+            = f.submit "Send", class: "btn"

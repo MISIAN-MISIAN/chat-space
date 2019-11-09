@@ -17,6 +17,7 @@
       }
       &__lists {
         display: inline-block;
+        float: right;
         .list{
           display: inline-block;
         }
@@ -118,52 +119,41 @@
         }
       } 
     }
-    .footer{
+    .form {
       background-color: #DDDDDD;
       box-sizing: border-box;
       height: 90px;
       padding: 20px 50px 20px 40px;
-      .form-box{
-        width: calc(100% - 110px);
-        .new-message {
-          border: none;
-          float: left;
-
-          height: 50px;
-          width: 100%;
-          color: #434a54;
-          font-size: 16px;
-        }
-        .new-message-box{
-          position: absolute;
-          background-color:transparent;
-          .box-image{
-            line-height: 50px;  
-            display: inline-block;
-            position: relative;
-            padding-left: 10px;
-            left: 850px;
-            bottom: 50px;
-           
-          }  
-        }
-        
-        .btn{
-          position: relative;
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-bottom: 50px;
-          background-color: #38aef0;
-          color: white;
-          left: 910px;
-          bottom: 50px;
-          margin-left: 30px;
-          
-        }
-        
+      &__message {
+        border: none;
+        float: left;
+        height: 50px;
+        width: calc(100% - 150px);
       }
-    }   
+      &__mask {
+        background-color: white;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+      &__submit {
+        background-color: #38AEF0;
+        border: none;
+        color: white;
+        float: right;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
+    }
   }   
 }
  

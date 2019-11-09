@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
       redirect_to group_messages_path(@group), notice: "メッセージ送信されました"
     else 
       @messages = @group.messages.includes(:user)
-      flah.now[:alert] = "メッセージを入力してください"
+      flash.now[:alert] = "メッセージを入力してください"
       render :index
     end  
 

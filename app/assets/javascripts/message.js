@@ -41,8 +41,6 @@ $(function(){
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $('#new_message')[0].reset();
-      // 51行目と同じ動きするためコメントアウトしている。↓送信ボタン２回連続で押せる.propでもremoveAttrどちら使ってもいい
-      // $(".form__submit").prop("disabled", false);
     })
     .fail(function(){
       alert('error');

@@ -15,7 +15,8 @@
       
       .right-header
         .right-header__btn
-          = link_to "Edit", edit_group_path(current_user)
+          = link_to "Edit", edit_group_path(params[:group_id])
+          
 
     .messages
       = render partial: 'messages', collection: @messages

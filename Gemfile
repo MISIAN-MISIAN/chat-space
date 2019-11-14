@@ -64,3 +64,7 @@ end
   #gem 'rmagick', require: 'RMagick'
   gem 'pry-rails'
   gem 'jquery-rails'
+
+  group :production do
+  gem 'unicorn', '5.4.1'
+end

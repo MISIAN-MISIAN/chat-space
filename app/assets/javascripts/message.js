@@ -78,5 +78,5 @@ $(function(){
       });
     }
   }
-  setInterval(reloadMessages, 20000);
+  setInterval(reloadMessages, 7000);
 });
